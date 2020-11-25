@@ -128,9 +128,9 @@ public class email_system {
 	    }
 	
 	
-	/**
-     * 发送包含附件的邮件（附件为在线资源)
-     */
+	
+      //发送包含附件的邮件（附件为在线资源)
+     
 	public String sendEmailsWithOnlineAttachments() throws EmailException, MalformedURLException {
 		  //this.final_own_account = this.own_account + "@qq.com";
 		  //this.final_object_account = this.object_account + "@qq.com";
