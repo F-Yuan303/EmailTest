@@ -24,7 +24,7 @@ public class integrationTest {
 		email = mock(email_system.class);
 		this.email.setown_account("1261661322");
 		this.email.setobject_account("1261661322");
-		this.email.setcode("evcueuviteoqgecd");
+		this.email.setcode("lmganceuizazgcga");
 	}
 
 	@After

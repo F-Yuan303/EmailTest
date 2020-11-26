@@ -15,7 +15,7 @@ public class main {
 		email_system newemail = new email_system();
 		newemail.setown_account("1261661322");
 		newemail.setobject_account("1261661322");
-		newemail.setcode("evcueuviteoqgecd");
+		newemail.setcode("lmganceuizazgcga");
 		newemail.menu();
 		//newemail.sendSimpleTextEmail();
 		//newemail.sendEmailsWithpicture();

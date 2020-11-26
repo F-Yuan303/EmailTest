@@ -20,7 +20,7 @@ public class email_systemTest {
 		this.email = new email_system();
 		this.email.setown_account("1261661322");
 		this.email.setobject_account("1261661322");
-		this.email.setcode("evcueuviteoqgecd");
+		this.email.setcode("lmganceuizazgcga");
 	}
 
 	@After
@@ -36,16 +36,19 @@ public class email_systemTest {
 	@Test
 	public void testSendSimpleTextEmail() throws EmailException {
 		this.email.sendSimpleTextEmail();
+		assertEquals("This is a test mail from java application.", this.email.sendSimpleTextEmail());
 	}
 
 	@Test
 	public void testSendEmailsWithpicture() throws EmailException {
 		this.email.sendEmailsWithpicture();
+		assertEquals("C:\\\\Users\\\\86182\\\\Desktop\\\\新建文件夹\\\\IMG_8034(20201106-170907).JPG", this.email.sendEmailsWithpicture());
 	}
 
 	@Test
 	public void testSendEmailsWithOnlineAttachments() throws MalformedURLException, EmailException {
 		this.email.sendEmailsWithOnlineAttachments();
+		assertEquals("https://www.baidu.com/img/bd_logo1.png", this.email.sendEmailsWithOnlineAttachments());
 	}
 
 }

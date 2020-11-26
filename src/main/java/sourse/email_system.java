@@ -64,8 +64,9 @@ public class email_system {
 	}
 	
 	public String sendSimpleTextEmail() throws EmailException {
-		  //this.final_own_account = this.own_account + "@qq.com";
-		  //this.final_object_account = this.object_account + "@qq.com";
+		  this.final_own_account = this.own_account + "@qq.com";
+		  this.final_object_account = this.object_account + "@qq.com";
+		  String message = "This is a simple test mail from java application.";
 		
 	       // 发送简单的email,不能添加附件
 	       Email email = new SimpleEmail();	 
@@ -91,22 +92,23 @@ public class email_system {
 	       // 邮件主题
 	       email.setSubject("test email");
 	       // 邮件正文
-	       email.setMsg("This is a test mail from java application.");
+	       email.setMsg(message);
 	       // 发送
 	       email.send();
 	       System.out.println("发送成功！");
-		return "发送文本邮件成功！";
+		return message;
 	    }
 	
 	
 	public String sendEmailsWithpicture() throws EmailException {
-		  //this.final_own_account = this.own_account + "@qq.com";
-		  //this.final_object_account = this.object_account + "@qq.com";
+		  this.final_own_account = this.own_account + "@qq.com";
+		  this.final_object_account = this.object_account + "@qq.com";
+		  String path = "C:\\\\Users\\\\86182\\\\Desktop\\\\新建文件夹\\\\IMG_8034(20201106-170907).JPG";
 		  
 	       // 附件类，可以添加本地资源，也可以指定网络上资源，在发送时自动将网络上资源下载发送
 	       EmailAttachment attachment = new EmailAttachment();
 	       // 本地路径
-	       attachment.setPath("C:\\Users\\86182\\Desktop\\新建文件夹\\IMG_8034(20201106-170907).JPG");
+	       attachment.setPath(path);
 	       // 定义附件
 	       attachment.setDisposition(EmailAttachment.ATTACHMENT);
 	       // 附件描述
@@ -119,12 +121,12 @@ public class email_system {
 	       email.setAuthentication(this.own_account, this.code);
 	       email.setFrom(this.final_own_account);
 	       email.addTo(this.final_object_account);
-	       email.setSubject("lwwnb");
-	       email.setMsg("Here is a lwwnb.");
+	       email.setSubject("test message");
+	       email.setMsg("Here is a test message.");
 	       email.attach(attachment);
 	       email.send();
 	       System.out.println("发送成功！");
-		return "发送本地资源邮件成功！";
+		return path;
 	    }
 	
 	
@@ -132,11 +134,12 @@ public class email_system {
       //发送包含附件的邮件（附件为在线资源)
      
 	public String sendEmailsWithOnlineAttachments() throws EmailException, MalformedURLException {
-		  //this.final_own_account = this.own_account + "@qq.com";
-		  //this.final_object_account = this.object_account + "@qq.com";
-		
+		  this.final_own_account = this.own_account + "@qq.com";
+		  this.final_object_account = this.object_account + "@qq.com";
+		  String url = "https://www.baidu.com/img/bd_logo1.png";
+		  
 	       EmailAttachment attachment = new EmailAttachment();
-	       attachment.setURL(new URL("https://www.baidu.com/img/bd_logo1.png"));
+	       attachment.setURL(new URL(url));
 	       attachment.setDisposition(EmailAttachment.ATTACHMENT);
 	       attachment.setDescription("Baidu logo");
 	       attachment.setName("Baidu.png");
@@ -150,6 +153,6 @@ public class email_system {
 	       email.attach(attachment);
 	       email.send();
 	       System.out.println("发送成功！");
-	       return "发送网络资源邮件成功！";
+	       return url;
 	    }
 }
