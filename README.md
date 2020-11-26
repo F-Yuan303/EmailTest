@@ -1,5 +1,4 @@
 # EmailTest Project
-[toc]
 
 ## 1.项目开发
   本项目是以`java`为开发语言，`eclipse`作为开发平台所建立的`maven`项目。
