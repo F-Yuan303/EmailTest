@@ -59,6 +59,5 @@ public class integrationTest {
         //verifyNoMoreInteractions(email);
         //verifyZeroInteractions(email);
 	}
-	
-
+//>test</scope>
 }
