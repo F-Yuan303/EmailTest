@@ -43,16 +43,10 @@ public class email_system {
 	}
 	
 	
-	public void menu() throws EmailException, MalformedURLException {
+	public void menu(int option) throws EmailException, MalformedURLException {
 		this.final_own_account = this.own_account + "@qq.com";              //获取完整账号
 		this.final_object_account = this.object_account + "@qq.com";
-		System.out.println("Welcome to online email!");
-		System.out.println("1.发送简单邮件");
-		System.out.println("2.发送含本地资源文件");
-		System.out.println("3.发送含网络资源文件");
-		System.out.print("请选择功能：");
-		Scanner scanner = new Scanner(System.in);
-		int option = scanner.nextInt();
+		int option1 = option;
 		if (option == 1)
 			this.sendSimpleTextEmail();
 		else if (option == 2)

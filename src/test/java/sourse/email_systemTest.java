@@ -30,7 +30,7 @@ public class email_systemTest {
 
 	@Test
 	public void testMenu() throws MalformedURLException, EmailException {
-		this.email.menu();
+		this.email.menu(3);
 	}
 
 	@Test
