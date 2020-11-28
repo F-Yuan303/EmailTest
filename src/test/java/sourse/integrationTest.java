@@ -30,6 +30,7 @@ public class integrationTest {
 	@After
 	public void tearDown() throws Exception {
 		this.email = null;
+		//1235467
 	}
 
 	@Test
